@@ -1,10 +1,12 @@
 # Commit Message Structure
 
-`<type> [optional scope]: <description>
+```
+<type> [optional scope]: <description>
 
 [optional body]
 
-[optional footer]`
+[optional footer]
+```
 
 # Types
 
@@ -24,17 +26,46 @@
 
 # Specification
 
+The key words **"MUST"**, **"MUST NOT"**, **"REQUIRED"**, **"SHALL"**, **"SHALL NOT"**,  
+**"SHOULD"**, **"SHOULD NOT"**, **"RECOMMENDED"**, **"MAY"**, and **"OPTIONAL"**  
+in this document are to be interpreted as described in **RFC 2119**.
 
-The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in RFC 2119.
+1. Commits **MUST** be prefixed with a type, which consists of a noun,  
+   such as `feat`, `fix`, `etc.`, followed by a colon and a space.
 
-Commits MUST be prefixed with a type, which consists of a noun, feat, fix, etc., followed by a colon and a space.
-The type feat MUST be used when a commit adds a new feature to your application or library.
-The type fix MUST be used when a commit represents a bug fix for your application.
-An optional scope MAY be provided after a type. A scope is a phrase describing a section of the codebase enclosed in parenthesis, e.g., fix(parser):
-A description MUST immediately follow the type/scope prefix. The description is a short description of the code changes, e.g., fix: array parsing issue when multiple spaces were contained in string.
-A longer commit body MAY be provided after the short description, providing additional contextual information about the code changes. The body MUST begin one blank line after the description.
-A footer MAY be provided one blank line after the body. The footer SHOULD contain additional issue references about the code changes (such as the issues it fixes, e.g., Fixes #13).
-Breaking changes MUST be indicated in the footer AND by appending a ! after the type/scope. A BREAKING CHANGE introduces a breaking API change (correlating with MAJOR in Semantic Versioning). A BREAKING CHANGE can be part of commits of any type.
-A description MUST be provided after the BREAKING CHANGE:, describing what has changed about the API, e.g., BREAKING CHANGE: environment variables now take precedence over config files.
-The footer MUST only contain BREAKING CHANGE, external links, issue references, and other meta-information.
-Types other than feat and fix MAY be used in your commit messages.
+2. The type `feat` **MUST** be used when a commit adds a new feature to your
+   application or library.
+
+3. The type `fix` **MUST** be used when a commit represents a bug fix for your
+   application.
+
+4. An optional scope **MAY** be provided after a type.  
+   A scope is a phrase describing a section of the codebase enclosed in
+   parentheses, e.g. `fix(parser)`.
+
+5. A description **MUST** immediately follow the type/scope prefix.  
+   The description is a short description of the code changes, e.g.  
+   `fix: array parsing issue when multiple spaces were contained in string`.
+
+6. A longer commit body **MAY** be provided after the short description,
+   providing additional contextual information about the code changes.  
+   The body **MUST** begin one blank line after the description.
+
+7. A footer **MAY** be provided one blank line after the body.  
+   The footer **SHOULD** contain additional issue references about the code
+   changes (such as the issues it fixes, e.g. `Fixes #13`).
+
+8. Breaking changes **MUST** be indicated in the footer **AND** by appending
+   `!` after the type/scope.  
+   A **BREAKING CHANGE** introduces a breaking API change (correlating with
+   **MAJOR** in Semantic Versioning).  
+   A **BREAKING CHANGE** can be part of commits of any type.
+
+9. A description **MUST** be provided after the **BREAKING CHANGE**, describing
+   what has changed about the API, e.g.  
+   `BREAKING CHANGE: environment variables now take precedence over config files`.
+
+10. The footer **MUST** only contain **BREAKING CHANGE**, external links,
+    issue references, and other meta-information.
+
+11. Types other than `feat` and `fix` **MAY** be used in your commit messages.
